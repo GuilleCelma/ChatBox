@@ -1,4 +1,4 @@
-import { auth } from "firebase"
+
 import React, {useContext, useState, useEffect } from "react"
 import { useHistory } from "react-router-dom"
 import Auth from "../firebase.js"

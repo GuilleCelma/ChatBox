@@ -1,5 +1,5 @@
 
-import React, {useRef, useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { useHistory } from "react-router-dom"
 import {ChatEngine} from "react-chat-engine"
 import Auth from "../firebase"
@@ -81,7 +81,7 @@ const Chats = ()=>{
             </div>
 
             <ChatEngine 
-                height="calc(100vh -66px"
+                height="90vh"          //"calc(100vh -66px"
                 projectID= "4d4345d7-2d8d-49e7-a40e-a38c5eaabc43"
                 userName={user.email}
                 userSecret={user.uid} 
