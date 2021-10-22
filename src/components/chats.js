@@ -24,7 +24,6 @@ const Chats = ()=>{
 
     const getFile = async (url) =>{
 
-        console.log(url)
         const response = await fetch(url)
         const data = await response.blob()
 
@@ -40,7 +39,7 @@ const Chats = ()=>{
 
         axios.get("https://api.chatengine.io/users/me", {
             headers:{
-                "project-id": "4d4345d7-2d8d-49e7-a40e-a38c5eaabc43",
+                "project-id":process.env.REACT_APP_ID,
                 "user-name": user.email,
                 "user-secret":user.uid
             }
@@ -58,7 +57,7 @@ const Chats = ()=>{
             .then((avatar) =>{
                 formData.append("avatar", avatar, avatar.name)
 
-                axios.post("https://api.chatengine.io/users", formData, {headers:{"private-key": process.env.REACT_APP_CHAT_ENGINE_KEY}})
+                axios.post("https://api.chatengine.io/users", formData, {headers:{"private-key": process.env.REACT_APP_KEY}})
                 .then(()=> setLoading(false))
                 .catch((error)=>console.log(error))
             })
@@ -68,7 +67,7 @@ const Chats = ()=>{
 
     if(!user || loading) return "loading"
 
-    console.log(process.env.REACT_APP_KEY)
+    
     return(
         
         <div className="chats-page">
@@ -83,7 +82,7 @@ const Chats = ()=>{
 
             <ChatEngine 
                 height="calc(100vh -66px"
-                projectID= {process.env.REACT_APP_CHAT_ENGINE_ID}
+                projectID= {process.env.REACT_APP_ID}
                 userName={user.email}
                 userSecret={user.uid} 
             />
