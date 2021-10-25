@@ -5,7 +5,7 @@ body {
     padding: 0px;
     margin: 0px;
     background-color: blue;
-    color:white;
+    
 }
 
 /* Home Page*/
@@ -19,22 +19,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  color:white;
 }
 
 #heroText,#heroImage{
-  width:500px;
-  height: 500px;
+  width:400px;
+  height: 400px;
   margin: 0 50px;
   display:flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-
+#heroImage{
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 #heroImage img{
- height: 100%;
- width: auto;
-
+ height: 370px;
+ width: 370px;
+border-radius: 50%;
 }
 
 #hero h1{
@@ -71,6 +78,7 @@ body {
 #intructions  h2{
   font-size: 35px;
   margin-top: 60px;
+  color:white;
 }
 #intructions  img{
   width: 400px;
@@ -85,6 +93,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: Roboto;
+  color:white;
 }
 #features h2{
   font-size: 35px;;
@@ -92,11 +101,14 @@ body {
 #cardContainer{
   display: flex;
   flex-direction: row;
+
   justify-content: center;
   align-items: center;
+ 
 }
 
 .card{
+
   margin-top: 60px;
   width: 200px;
   height: 150px;
@@ -120,12 +132,19 @@ body {
 @media (max-width: 490px) {
   #hero{
     flex-direction: column-reverse;
-    height: 150vh;
+    height: 110vh;
     
   }
 
   #heroImage{
-    margin-top: 100px;
+    
+    height: 370px;
+    width: 370px;
+  }
+  #heroImage img{
+   height: 340px;
+   width: 340px;
+
   }
   #heroText h1{
     font-size:29px;
@@ -139,13 +158,21 @@ body {
     width: 320px;
   }
   #features{
-    height: 130vh;
+    height: 150vh;
   }
   #cardContainer{
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+   width: 340px;
   }
+
+  .card{
+    height: 200px;
+    margin:20px 0px;
+  }
+
+
 }
 /* Chats Page */
 

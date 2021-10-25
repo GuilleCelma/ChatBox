@@ -17,7 +17,7 @@ const Home = () =>{
                     <Link to="/login" id="getStarted">Get Started</Link>
                 </div>
                 <div id="heroImage">
-                    <img src="/chat.jpg" alt="people chating"/>
+                    <img src="/chat2.jpg" alt="people chating"/>
                 </div>
             </section>
             <section id="intructions">
