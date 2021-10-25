@@ -34,7 +34,7 @@ body {
 #heroImage img{
  height: 100%;
  width: auto;
- box-shadow: 0 0 8px 8px blue inset;
+
 }
 
 #hero h1{
@@ -86,6 +86,9 @@ body {
   align-items: center;
   font-family: Roboto;
 }
+#features h2{
+  font-size: 35px;;
+}
 #cardContainer{
   display: flex;
   flex-direction: row;
@@ -104,6 +107,46 @@ body {
   text-align: center;
 }
 
+
+@media (max-width: 900px) {
+  #hero{
+    flex-direction: column-reverse;
+    height: 150vh;
+  }
+  #heroImage{
+    margin-top: 100px;
+  }
+}
+@media (max-width: 490px) {
+  #hero{
+    flex-direction: column-reverse;
+    height: 150vh;
+    
+  }
+
+  #heroImage{
+    margin-top: 100px;
+  }
+  #heroText h1{
+    font-size:29px;
+    padding: 10px;
+  }
+  #hero p{
+    font-size: 16px;
+  }
+  #intructions  img{
+    height: 250px;
+    width: 320px;
+  }
+  #features{
+    height: 130vh;
+  }
+  #cardContainer{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 /* Chats Page */
 
 .chats-page {
