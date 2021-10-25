@@ -70,22 +70,24 @@ const Chats = ()=>{
     
     return(
         
-        <div className="chats-page">
-            <div className="nav-bar">
+        <div className="chats-page" >
+            <nav className="nav-bar">
                 <div className="logo-tab">
                     ChatBox
                 </div>
                 <div onClick={handleLogout} className="logout-tab">
                     Logout
                 </div> 
-            </div>
-
+            </nav>
+            <div style={{ fontFamily: 'Arial' }}>
+            
             <ChatEngine 
-                height="90vh"         
+                height="91vh"         
                 projectID= "4d4345d7-2d8d-49e7-a40e-a38c5eaabc43"
                 userName={user.email}
                 userSecret={user.uid} 
             />
+            </div>
         </div>
     )
 

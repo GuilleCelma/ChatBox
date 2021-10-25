@@ -71,7 +71,7 @@ border-radius: 50%;
   font-family: Roboto;
   display: flex;
   flex-direction: column;
-  justify-items: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -87,13 +87,14 @@ border-radius: 50%;
 
 #features{
   width: 100vw;
-  height: 65vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   font-family: Roboto;
   color:white;
+  background-color: #40a9ff;
 }
 #features h2{
   font-size: 35px;;
@@ -101,7 +102,6 @@ border-radius: 50%;
 #cardContainer{
   display: flex;
   flex-direction: row;
-
   justify-content: center;
   align-items: center;
  
@@ -182,6 +182,15 @@ border-radius: 50%;
   left: 0px;
   width: 100vw;
   height: 100vh;
+  font-family: Roboto !important;
+}
+.ce-chats-container,
+#ce-feed-container,
+ .ce-settings,
+ .ce-chat-title-container,
+ .ce-input,
+ #msg-textarea{
+  font-family: Roboto !important;
 }
 
 .nav-bar {
@@ -215,6 +224,7 @@ border-radius: 50%;
 /* Login Page */
 
 #login-page {
+  font-family: Roboto;
   background-image: linear-gradient(#40a9ff, #096dd9);
   position: absolute;
   top: 0px;
@@ -266,4 +276,40 @@ border-radius: 50%;
   position: relative;
   left: calc(50vw - 33px);
   top: calc(50vh - 22px);
+}
+
+
+/*Footer Page*/
+#footer{
+  height: 25vh;
+  background-color: rgb(37, 37, 37);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#footer p{
+  color: rgb(148, 147, 147);
+  margin-top: 40px;
+
+}
+
+#footerLinks{
+  display: flex;
+  justify-content: center;
+}
+.footerLink{
+  height: 6vh;
+  color:rgb(148, 147, 147);
+  padding: 10px;
+  background-color: rgb(75, 72, 72);
+  border-radius: 50%;
+  transition: 0.5s ease;
+  margin: 0 20px;
+}
+
+.footerLink:hover{
+  color:  #40a9ff;;
 }
