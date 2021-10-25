@@ -15,7 +15,7 @@ const Chats = ()=>{
     const history = useHistory()
     const {user} = useAuth()
     
-
+    console.log(user)
     const handleLogout = async ()=>{
             await Auth.signOut()
 
@@ -81,7 +81,7 @@ const Chats = ()=>{
             </div>
 
             <ChatEngine 
-                height="90vh"          //"calc(100vh -66px"
+                height="90vh"         
                 projectID= "4d4345d7-2d8d-49e7-a40e-a38c5eaabc43"
                 userName={user.email}
                 userSecret={user.uid} 
